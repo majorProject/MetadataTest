@@ -1,6 +1,10 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * This is metadata extractor class built to get
+ * different parameters of EXIF from a JPEG file.
+ * External library need:
+ *      -metadata-extractor-2.5.0-RC3.jar
+ *      -xmpcore.jar
+ * http://www.drewnoakes.com/code/exif/
  */
 package exifMetadataExtractor;
 
@@ -14,6 +18,7 @@ import com.drew.metadata.exif.ExifSubIFDDirectory;
 /**
  *
  * @author susan
+ * 
  */
 public class EXIFMetadataExtractor {
     
@@ -25,6 +30,12 @@ public class EXIFMetadataExtractor {
     }
     
     //constructor with parameter
+    /**
+     * Constructor call with a parameter needed
+     * @param jpegFile
+     * @throws ImageProcessingException
+     * @throws IOException 
+     */
    EXIFMetadataExtractor(File jpegFile) throws ImageProcessingException, IOException{
         this.metadata = ImageMetadataReader.readMetadata(jpegFile);
         this.directory = metadata.getDirectory(ExifSubIFDDirectory.class);
