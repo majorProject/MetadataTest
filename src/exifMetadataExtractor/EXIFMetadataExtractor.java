@@ -3,7 +3,6 @@
  * different parameters of EXIF from a JPEG file.
  * External library need:
  *      -metadata-extractor-2.5.0-RC3.jar
- *      -xmpcore.jar
  * http://www.drewnoakes.com/code/exif/
  */
 package exifMetadataExtractor;
